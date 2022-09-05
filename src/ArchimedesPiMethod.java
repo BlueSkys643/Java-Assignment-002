@@ -2,6 +2,19 @@ import java.util.Scanner;
 
 public class ArchimedesPiMethod {
     public static void main(String[] args) {
-
+        while(true) {
+            System.out.println("Number of Sides?");
+            Scanner sc = new Scanner(System.in);
+            int n = sc.nextInt();
+            if (n < 1) {
+                break;
+            }
+            double b = 360.0 / n;
+            double a = b / 2;
+            double s = 2 * Math.sin(Math.toRadians(a));
+            double p = n * s;
+            double pi = p / 2;
+            System.out.printf("Pi estimate is: %f%n", pi);
+        }
     }
 }
